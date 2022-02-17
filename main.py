@@ -20,8 +20,7 @@ vendas_produtos = [
 
 # Cabeçalho do relatório
 print("-" * 85)
-print("|{:^20}|{:^20}|{:^20}|{:^20}|".format(
-    "PRODUTO", "VENDAS 2019", "VENDAS 2020", "CRESCIMENTO"))
+print("|{:^20}|{:^20}|{:^20}|{:^20}|".format("PRODUTO", "VENDAS 2019", "VENDAS 2020", "CRESCIMENTO"))
 print("-" * 85)
 
 for produto, vendas2019, vendas2020 in vendas_produtos:
@@ -34,14 +33,11 @@ for produto, vendas2019, vendas2020 in vendas_produtos:
         crescimento = "{:.2%} 🠗".format(crescimento)
 
     # Formatação dos valores
-    vendas2019 = "R${:_.2f}".format(
-        vendas2019).replace(",", ".").replace("_", ".")
-    vendas2020 = "R${:_.2f}".format(
-        vendas2020).replace(",", ".").replace("_", ".")
+    vendas2019 = "R${:_.2f}".format(vendas2019).replace(",", ".").replace("_", ".")
+    vendas2020 = "R${:_.2f}".format(vendas2020).replace(",", ".").replace("_", ".")
 
     # Exibição do resultado
-    print("|{:<20}|{:^20}|{:^20}|{:^20}|".format(
-        produto, vendas2019, vendas2020, crescimento))
+    print("|{:<20}|{:^20}|{:^20}|{:^20}|".format(produto, vendas2019, vendas2020, crescimento))
 
 # Rodapé do relatório
 print("-" * 85)
